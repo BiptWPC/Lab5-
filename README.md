@@ -31,42 +31,42 @@
 实现断句功能
 
   int n = -1;
-            int i = 0;
-            byte [] a = new byte[100];
-            File f = new File("src\\Experience1\\changhenge.txt");
-            FileInputStream in = new FileInputStream(f);
-            File targetFile = new File("src\\Experience1\\B.txt");
-            Writer out = new FileWriter(targetFile,true);
-            out.append(li.toString());
-            System.out.println(li.toString());
-            out.flush();
-            while((n = in.read(a,0,2)) != -1){
-                String s = new String (a,0,n);
-                i++;
-                out.write(s);
-                out.flush();
-                if(i%7 == 0 && i%14 != 0){
-                    //out.write(s);
-                    out.append("，");
-                    out.flush();
-                }
+  int i = 0;
+  byte [] a = new byte[100];
+  File f = new File("src\\Experience1\\changhenge.txt");
+  FileInputStream in = new FileInputStream(f);
+  File targetFile = new File("src\\Experience1\\B.txt");
+  Writer out = new FileWriter(targetFile,true);
+  out.append(li.toString());
+  System.out.println(li.toString());
+  out.flush();
+  while((n = in.read(a,0,2)) != -1){
+    String s = new String (a,0,n);
+    i++;
+    out.write(s);
+    out.flush();
+    if(i%7 == 0 && i%14 != 0){
+        //out.write(s);
+        out.append("，");
+        out.flush();
+       }
 
-                else if(i%14 == 0){
-                    out.append("。\n");
-                    //out.write(s);
-                    out.flush();
-                }
-                else{
-                    //out.write(s);
-                    out.flush();
-                }
-            }
-
-            in.close();
+    else if(i%14 == 0){
+        out.append("。\n");
+        //out.write(s);
+        out.flush();
+    }
+    else{
+        //out.write(s);
+        out.flush();
+           }
+ }
+in.close();
 
 实现创建多线程，实现查词功能。
 
 //创建多线程的类
+
 public class MultiThread extends Thread {
     //定义此线程查词功能的方法
     public static boolean Containstr(String s1, String s2) {
