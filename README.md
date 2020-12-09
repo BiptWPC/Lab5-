@@ -30,6 +30,7 @@
 ## 核心方法
 实现断句功能
 
+```Java
   int n = -1;
   int i = 0;
   byte [] a = new byte[100];
@@ -62,9 +63,12 @@
            }
  }
 in.close();
+```
 
 实现创建多线程，实现查词功能。
 
+
+```Java
 //创建多线程的类
 
 public class MultiThread extends Thread {
@@ -123,13 +127,16 @@ public class MultiThread extends Thread {
         strfind(file);
     }
 }
+```
+
+```Java
 
 //学生管理的接口，定义学生必须要有的方法
 interface StudentManage {
     void setfee(int fee);
     int getfee();
 }
-
+```
 
 ## 实验结果
 
